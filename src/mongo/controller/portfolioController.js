@@ -23,44 +23,12 @@ const getWorkById = async (req, res) => {
   }
 };
 
-// const postWork = async (req, res) => {
-//   const { body } = req;
-//   try {
-//     const newWork = new portfolioModel(body);
-//     await newWork.save();
-//     res.status(200).json(newWork);
-//   } catch (error) {
-//     res.status(500).json({ message: "Sorry, can't post your work" });
-//   }
-// };
-
-// const postWork = async (req, res) => {
-//   const { body } = req;
-
-//   try {
-//     const result = await cloudinary.uploader.upload(req.body.image, {
-//       folder: "portfolio", // Replace with your desired Cloudinary folder
-//       resource_type: "auto", // This will automatically detect the resource type (image, video, raw, etc.)
-//     });
-
-//     body.image = result.secure_url;
-
-//     const newWork = new portfolioModel(body);
-//     await newWork.save();
-//     res.status(200).json(newWork);
-//   } catch (error) {
-//     console.error("Error posting work:", error);
-//     res.status(500).json({ message: "Sorry, can't post your work" });
-//   }
-// };
 
 const postWork = async (req, res) => {
   const { body } = req;
 
   try {
-    // Assuming you have an input field with the name 'image' in your form
-    // const { image } = body;
-
+    
     // Update 'images' URLs directly
     body.images = body.images.map(imgUrl => imgUrl);
 

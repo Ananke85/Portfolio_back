@@ -18,7 +18,7 @@ const portfolioSchema = new Schema({
     },
   ],
   repo: { type: String },
-  web: {type: String}
+  web: {type: String, default: ""}
 });
 
 module.exports = portfolioSchema;

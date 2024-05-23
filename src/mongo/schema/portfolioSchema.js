@@ -18,7 +18,8 @@ const portfolioSchema = new Schema({
     },
   ],
   repo: { type: String },
-  web: {type: String, default: ""}
+  web: {type: String, default: ""},
+  order: {type: Number}
 });
 
 module.exports = portfolioSchema;
